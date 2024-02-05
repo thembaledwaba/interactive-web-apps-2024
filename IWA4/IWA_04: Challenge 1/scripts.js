@@ -1,4 +1,4 @@
-const date = 2050;                                          // changed : to = , changed const to let
+const date = 2050;                                          // changed : to = , 
 const status = "parent";                                    // Changed status to parent as as it was indicated that it should be "parent"
 let count = 0;                                              // changed const to let 
 
