@@ -3,8 +3,13 @@ const secondaryPhone = '0219131568'
 
 // Only change below this line
 
-const primaryValid = typeof Number === primaryPhone; /* changed to 3 equals signs*/
-const secondaryValid = typeof Number !== secondaryPhone; /* changed to not equals signs*/
+const primaryValid = typeof number === parseInt(primaryPhone);      // added one more equals sign
+const secondaryValid = typeof number === parseInt(secondaryPhone);  // made the statement a negative
 
 console.log('Primary phone is valid numerical string:', primaryValid);
-console.log('Secondary phone is valid numerical string:', secondaryValid );
+console.log('Secondary phone is valid numerical string:', secondaryValid);
+
+/*
+.isNaN(parseInt(stringVal)
+)
+!Number*/

@@ -12,7 +12,9 @@ pens = 5 * NONE_SELECTED;
 let shipping = 400;
 let currency = 'R';
 let area = 'RSA';
-if (area === 'RSA') {shipping === 400 && currency === 'R'};
+
+if (area === 'RSA') {shipping = 400
+	 currency = 'R'};
 
 if (area === 'NAM'){
     shipping = 600
