@@ -36,7 +36,8 @@ const books = [
             checkout: document.querySelector('#book1 .checkout'),
             checkin: document.querySelector('#book1 .checkin'),
         },
-
+    }, 
+    {
         status: document.querySelector('#book2 .status').innerText,
         html: {
             status: document.querySelector('#book2 .status'),
@@ -44,7 +45,8 @@ const books = [
             checkout: document.querySelector('#book2 .checkout'),
             checkin: document.querySelector('#book2 .checkin'),
         },
-
+    }, 
+    {
         status: document.querySelector('#book3 .status').innerText,
         html: {
             status: document.querySelector('#book3 .status'),
@@ -52,10 +54,10 @@ const books = [
             checkout: document.querySelector('#book3 .checkout'),
             checkin: document.querySelector('#book3 .checkin'),
         },
-    },
+    }
 ]
 
-    books[0].html.checkin.style.color = ''
+books[0].html.checkin.style.color = ''
 books[0].html.status.style.color = STATUS_MAP[books[0].status].color
 books[0].html.reserve.disabled = !STATUS_MAP[books[0].status].canReserve
 books[0].html.checkout.disabled = !STATUS_MAP[books[0].status].canCheckout
