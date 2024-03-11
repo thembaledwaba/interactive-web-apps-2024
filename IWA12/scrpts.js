@@ -27,35 +27,48 @@ const STATUS_MAP = {
 
 // Edit below line 
 
-book1Status = #book1.querySelector('.status');
-book1Reserve = #book1.querySelector('.reserve');
-book1Checkout = #book1.querySelector('.checkout');
-book1Checkin = #book1.querySelector('.checkin');
+const books = [
+    {
+        status: document.querySelector('#book1 .status').innerText,
+        html: {
+            status: document.querySelector('#book1 .status'),
+            reserve: document.querySelector('#book1 .reserve'),
+            checkout: document.querySelector('#book1 .checkout'),
+            checkin: document.querySelector('#book1 .checkin'),
+        },
 
-book2Status = #book2.querySelector('.status');
-book2Reserve = #book2.querySelector('.reserve');
-book2Checkout = #book2.querySelector('.checkout');
-book2Checkin = #book2.querySelector('.checkin');
+        status: document.querySelector('#book2 .status').innerText,
+        html: {
+            status: document.querySelector('#book2 .status'),
+            reserve: document.querySelector('#book2 .reserve'),
+            checkout: document.querySelector('#book2 .checkout'),
+            checkin: document.querySelector('#book2 .checkin'),
+        },
 
-book3Status = #book3.querySelector('.status')
-book3Reserve = #book3.querySelector('.reserve')
-book3Checkout = #book3.querySelector('.checkout')
-book3Checkin = #book3.querySelector('.checkin')
+        status: document.querySelector('#book3 .status').innerText,
+        html: {
+            status: document.querySelector('#book3 .status'),
+            reserve: document.querySelector('#book3 .reserve'),
+            checkout: document.querySelector('#book3 .checkout'),
+            checkin: document.querySelector('#book3 .checkin'),
+        },
+    },
+]
 
-checkin.0.color = none
-status.0.style.color = STATUS_MAP.status.color
-reserve.0 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-checkout.0 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-checkin.0 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+    books[0].html.checkin.style.color = ''
+books[0].html.status.style.color = STATUS_MAP[books[0].status].color
+books[0].html.reserve.disabled = !STATUS_MAP[books[0].status].canReserve
+books[0].html.checkout.disabled = !STATUS_MAP[books[0].status].canCheckout
+books[0].html.checkin.disabled = !STATUS_MAP[books[0].status].canCheckIn
 
-checkin.1.color = none
-status.1.style.color = STATUS_MAP.status.color
-reserve.1 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-checkout.1 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-checkin.1 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+books[1].html.checkin.style.color = ''
+books[1].html.status.style.color = STATUS_MAP[books[1].status].color
+books[1].html.reserve.disabled = !STATUS_MAP[books[1].status].canReserve
+books[1].html.checkout.disabled = !STATUS_MAP[books[1].status].canCheckout
+books[1].html.checkin.disabled = !STATUS_MAP[books[1].status].canCheckIn
 
-checkin.2.color = none
-status.2.style.color = STATUS_MAP.status.color
-reserve.2 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-checkout.2 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+books[2].html.checkin.style.color = ''
+books[2].html.status.style.color = STATUS_MAP[books[2].status].color
+books[2].html.reserve.disabled = !STATUS_MAP[books[2].status].canReserve
+books[2].html.checkout.disabled = !STATUS_MAP[books[2].status].canCheckout
+books[2].html.checkin.disabled = !STATUS_MAP[books[2].status].canCheckIn
